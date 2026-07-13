@@ -180,6 +180,12 @@
   .ba-figure{border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);line-height:0}
   .ba-figure img{width:100%;height:auto;display:block}
   @media(max-width:820px){.ba-grid{grid-template-columns:1fr;max-width:600px}}
+  /* Tıkla-ara görseller */
+  .img-call{display:block;cursor:pointer;position:relative;line-height:0}
+  .img-call img{transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+  .img-call::after{content:"📞 Hemen Ara";position:absolute;left:50%;bottom:16px;transform:translateX(-50%) translateY(10px);background:rgba(2,132,199,.96);color:#fff;font-weight:700;font-size:.85rem;padding:9px 18px;border-radius:999px;opacity:0;transition:.3s;pointer-events:none;white-space:nowrap;box-shadow:0 10px 24px -6px rgba(0,0,0,.45)}
+  .img-call:hover img{transform:scale(1.05)}
+  .img-call:hover::after{opacity:1;transform:translateX(-50%) translateY(0)}
 
   /* Testimonials */
   .rev{background:var(--sky-50)}
@@ -407,7 +413,9 @@
     </div>
     <div class="hero-visual">
       <div class="hero-img-wrap">
-        <img src="https://meyrapaktemizlik.com/images/meyrapak-temizlik.webp" alt="Meyrapak Temizlik — Sivas profesyonel temizlik hizmeti" width="1254" height="1254" loading="eager" fetchpriority="high">
+        <a class="img-call" href="tel:05515449658" aria-label="Hemen ara: 0551 544 96 58">
+          <img src="https://meyrapaktemizlik.com/images/meyrapak-temizlik.webp" alt="Meyrapak Temizlik — Sivas profesyonel temizlik hizmeti" width="1254" height="1254" loading="eager" fetchpriority="high">
+        </a>
       </div>
     </div>
   </div>
@@ -517,10 +525,14 @@
     </div>
     <div class="ba-grid">
       <figure class="ba-figure reveal">
-        <img src="https://meyrapaktemizlik.com/images/oncesi-sonrasi.webp" alt="Meyrapak Temizlik ofis öncesi ve sonrası — kirli ofisten tertemiz ofise dönüşüm" width="1536" height="1024" loading="lazy">
+        <a class="img-call" href="tel:05515449658" aria-label="Hemen ara: 0551 544 96 58">
+          <img src="https://meyrapaktemizlik.com/images/oncesi-sonrasi.webp" alt="Meyrapak Temizlik ofis öncesi ve sonrası — kirli ofisten tertemiz ofise dönüşüm" width="1536" height="1024" loading="lazy">
+        </a>
       </figure>
       <figure class="ba-figure reveal">
-        <img src="https://meyrapaktemizlik.com/images/oncesi-sonrasi2.png" alt="Meyrapak Temizlik koridor öncesi ve sonrası — kirli koridordan pırıl pırıl koridora" width="1690" height="1120" loading="lazy">
+        <a class="img-call" href="tel:05515449658" aria-label="Hemen ara: 0551 544 96 58">
+          <img src="https://meyrapaktemizlik.com/images/oncesi-sonrasi2.png" alt="Meyrapak Temizlik koridor öncesi ve sonrası — kirli koridordan pırıl pırıl koridora" width="1690" height="1120" loading="lazy">
+        </a>
       </figure>
     </div>
   </div>
@@ -593,7 +605,7 @@
 <!-- ===== Final CTA ===== -->
 <section class="cta-final">
   <div class="wrap">
-    <h2>Mekanınızı Tertemiz Teslim Edelim</h2>
+    <h2>Mekanınızı Tertemiz Teslim Alalım</h2>
     <p>Ücretsiz keşif ve şeffaf teklif için hemen ulaşın. Sivas'ın her noktasına profesyonel temizlik hizmeti.</p>
     <span class="num"><a href="tel:05515449658">📞 0551 544 96 58</a></span>
     <div class="row">
