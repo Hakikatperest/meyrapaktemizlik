@@ -24,8 +24,9 @@
 <meta property="og:site_name" content="Meyrapak Temizlik">
 <!-- GÖRSEL: paylaşım görseli (1200x630) yüklendiğinde og:image ekleyin -->
 
-<!-- FAVICON: kendi logonuzu ekleyene kadar emoji favicon -->
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🫧</text></svg>">
+<!-- FAVICON: Meyrapak logosu -->
+<link rel="icon" type="image/png" href="https://meyrapaktemizlik.com/images/meyrapak-logo.png">
+<link rel="apple-touch-icon" href="https://meyrapaktemizlik.com/images/meyrapak-logo.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -85,6 +86,7 @@
   .logo{display:flex;align-items:center;gap:11px;font-weight:800;font-size:1.22rem;color:var(--blue-900)}
   .logo .mark{width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,var(--blue-600),var(--cyan-500));
     display:grid;place-items:center;color:#fff;font-size:1.3rem;box-shadow:0 8px 18px -8px rgba(2,132,199,.7)}
+  .logo-mark{width:46px;height:46px;border-radius:50%;object-fit:contain;flex-shrink:0;display:block}
   .logo small{display:block;font-size:.66rem;font-weight:600;color:var(--muted);letter-spacing:.05em;margin-top:-2px}
   .menu{display:flex;align-items:center;gap:26px}
   .menu a{font-weight:600;color:var(--ink);font-size:.96rem;transition:.2s}
@@ -112,7 +114,7 @@
 
   .hero-visual{position:relative}
   .hero-img-wrap{position:relative;border-radius:26px;overflow:hidden;box-shadow:var(--shadow)}
-  .hero-img-wrap img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
+  .hero-img-wrap img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover}
   .hero-img-cap{position:absolute;left:0;right:0;bottom:0;padding:26px;color:#fff;
     background:linear-gradient(to top,rgba(11,58,92,.94),rgba(11,58,92,.4) 55%,transparent)}
   .hero-img-cap .emoji{font-size:1.9rem}
@@ -259,8 +261,9 @@
   /* Splash */
   #splash{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;background:linear-gradient(140deg,var(--blue-700),var(--blue-900));animation:splashOut .5s ease 1.7s forwards}
   #splash .si{text-align:center;color:#fff;animation:pop .7s cubic-bezier(.2,.8,.2,1)}
-  #splash .emb{width:78px;height:78px;border-radius:22px;background:rgba(255,255,255,.14);display:grid;place-items:center;font-size:2.4rem;margin:0 auto 16px;position:relative}
-  #splash .emb::after{content:"";position:absolute;inset:-8px;border-radius:26px;border:2px solid rgba(255,255,255,.35);animation:spin 1.6s linear infinite}
+  #splash .emb{width:98px;height:98px;border-radius:50%;display:grid;place-items:center;margin:0 auto 18px;position:relative}
+  #splash .emb img{width:100%;height:100%;border-radius:50%;display:block}
+  #splash .emb::after{content:"";position:absolute;inset:-9px;border-radius:50%;border:2px solid rgba(255,255,255,.4);animation:spin 1.6s linear infinite}
   #splash .st{font-size:1.4rem;font-weight:800;letter-spacing:.01em}
   #splash .ss{opacity:.8;font-size:.86rem;margin-top:4px}
   @keyframes pop{from{opacity:0;transform:translateY(14px) scale(.94)}to{opacity:1;transform:none}}
@@ -326,8 +329,7 @@
 <!-- ===== Splash ===== -->
 <div id="splash" aria-hidden="true">
   <div class="si">
-    <div class="emb">🫧</div>
-    <div class="st">Meyrapak Temizlik</div>
+    <div class="emb"><img src="https://meyrapaktemizlik.com/images/meyrapak-logo.png" alt="Meyrapak Temizlik" width="1024" height="1024"></div>
     <div class="ss">Sivas · pırıl pırıl bir başlangıç…</div>
   </div>
 </div>
@@ -347,9 +349,8 @@
 <!-- ===== Header ===== -->
 <header class="nav" id="nav">
   <div class="wrap nav-inner">
-    <a href="#" class="logo" aria-label="Meyrapak Temizlik">
-      <!-- LOGO: kendi logonuzu ekleyene kadar simge + metin -->
-      <span class="mark">🫧</span>
+    <a href="#" class="logo" aria-label="Meyrapak Temizlik — Sivas">
+      <img class="logo-mark" src="https://meyrapaktemizlik.com/images/meyrapak-logo.png" alt="Meyrapak Temizlik logosu" width="1024" height="1024">
       <span>Meyrapak<small>Temizlik · Sivas</small></span>
     </a>
     <nav class="menu" id="menu">
@@ -398,15 +399,7 @@
     <div class="hero-visual">
       <div class="hero-float hf-1"><span class="dot" style="background:#e0f7f1">✨</span><div>Tertemiz Sonuç<small>%100 memnuniyet</small></div></div>
       <div class="hero-img-wrap">
-        <!-- ⬇ GÖRSEL YÜKLE: hero — çalışan ekip / temiz mekan (dikey 4:5, ör. 1000x1250) -->
-        <div class="ph" style="aspect-ratio:4/5">
-          <div class="ph-in"><div class="i">🧽</div><b>Hero görseli buraya</b><small>Ekip / temiz mekan · dikey 4:5</small></div>
-        </div>
-        <div class="hero-img-cap">
-          <div class="emoji">🧼</div>
-          <h3>Anahtar Teslim Temizlik</h3>
-          <p>Keşiften teslimata kadar tüm süreci profesyonel ekibimizle biz yönetiyoruz. Siz sadece tertemiz sonucun keyfini çıkarın.</p>
-        </div>
+        <img src="https://meyrapaktemizlik.com/images/meyrapak-temizlik.webp" alt="Meyrapak Temizlik — Sivas profesyonel temizlik hizmeti" width="1254" height="1254" loading="eager" fetchpriority="high">
       </div>
       <div class="hero-float hf-2"><span class="dot" style="background:#e0f2fe">🧴</span><div>Hijyenik Ürünler<small>Güvenli &amp; etkili</small></div></div>
     </div>
@@ -641,7 +634,7 @@
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <a href="#" class="logo" style="color:#fff"><span class="mark">🫧</span><span style="color:#fff">Meyrapak<small style="color:#7fb0cf">Temizlik · Sivas</small></span></a>
+        <a href="#" class="logo" style="color:#fff"><img class="logo-mark" src="https://meyrapaktemizlik.com/images/meyrapak-logo.png" alt="Meyrapak Temizlik logosu" width="1024" height="1024"><span style="color:#fff">Meyrapak<small style="color:#7fb0cf">Temizlik · Sivas</small></span></a>
         <p>Sivas'ta ev, ofis, inşaat sonrası ve apartman temizliğinde profesyonel çözüm ortağınız. Tertemiz mekanlar için doğru adres.</p>
         <div class="foot-soc">
           <!-- SOSYAL: kendi hesap linklerinizi ekleyin -->
