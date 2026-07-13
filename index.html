@@ -28,6 +28,11 @@
 <link rel="icon" type="image/png" href="https://meyrapaktemizlik.com/images/meyrapak-logo.png">
 <link rel="apple-touch-icon" href="https://meyrapaktemizlik.com/images/meyrapak-logo.png">
 
+<!-- Görsel hızlandırma: erken bağlantı + kritik görselleri öncelikli önyükle -->
+<link rel="preconnect" href="https://meyrapaktemizlik.com">
+<link rel="preload" as="image" href="https://meyrapaktemizlik.com/images/meyrapak-temizlik.webp" fetchpriority="high">
+<link rel="preload" as="image" href="https://meyrapaktemizlik.com/images/meyrapak-logo.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -179,6 +184,8 @@
   .gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
   .gal-grid .ph{aspect-ratio:4/3;border-radius:16px;overflow:hidden;border:1px solid var(--line)}
   .gal-grid .ph.tall{grid-row:span 2;aspect-ratio:auto}
+  .ba-figure{max-width:1000px;margin:0 auto;border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);line-height:0}
+  .ba-figure img{width:100%;height:auto;display:block}
 
   /* Testimonials */
   .rev{background:var(--sky-50)}
@@ -234,6 +241,9 @@
   .foot-soc{display:flex;gap:10px;margin-top:14px}
   .foot-soc a{width:40px;height:40px;border-radius:11px;display:grid;place-items:center;color:#fff;background:rgba(255,255,255,.14);transition:.2s;font-size:1.1rem}
   .foot-soc a:hover{transform:translateY(-2px);background:rgba(255,255,255,.24)}
+  .foot-soc a svg{width:20px;height:20px;display:block}
+  .foot-soc a.ig{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
+  .foot-soc a.ig:hover{filter:brightness(1.08)}
   footer.site{background:var(--blue-900);color:#a9cee4;padding:50px 0 24px}
   .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:32px;margin-bottom:30px}
   footer.site h4{color:#fff;margin-bottom:14px;font-size:1.05rem}
@@ -307,13 +317,14 @@
   "name":"Meyrapak Temizlik",
   "description":"Sivas'ta ev, ofis, inşaat sonrası ve apartman temizliği hizmeti veren profesyonel temizlik şirketi.",
   "url":"https://www.meyrapaktemizlik.com/",
-  "telephone":"+905000000000",
+  "telephone":"+905515449658",
+  "email":"meyrapaktemizlik@gmail.com",
+  "sameAs":["https://instagram.com/meyrapak"],
   "image":"https://www.meyrapaktemizlik.com/",
   "priceRange":"₺₺",
   "areaServed":{"@type":"City","name":"Sivas"},
   "address":{"@type":"PostalAddress","addressLocality":"Sivas","addressRegion":"Sivas","addressCountry":"TR"},
   "geo":{"@type":"GeoCoordinates","latitude":39.763193,"longitude":36.9875676},
-  "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"08:00","closes":"19:00"}],
   "makesOffer":[
     {"@type":"Offer","itemOffered":{"@type":"Service","name":"Ev Temizliği"}},
     {"@type":"Offer","itemOffered":{"@type":"Service","name":"Ofis Temizliği"}},
@@ -341,7 +352,7 @@
     <div class="tb-right">
       <span class="spark">✦</span> <span>Ücretsiz keşif &amp; teklif</span>
       <!-- ⚠️ TELEFON PLACEHOLDER -->
-      <a href="tel:05000000000">📞 0500 000 00 00</a>
+      <a href="tel:05515449658">📞 0551 544 96 58</a>
     </div>
   </div>
 </div>
@@ -386,9 +397,9 @@
       <p class="lead">Ev, ofis, inşaat sonrası ve apartman temizliğinde <strong>uzman ekip</strong> ve <strong>profesyonel ekipmanla</strong> yanınızdayız. Ücretsiz keşif, şeffaf teklif ve tertemiz bir sonuç.</p>
       <div class="hero-cta">
         <!-- ⚠️ WHATSAPP PLACEHOLDER -->
-        <a class="btn btn-wa btn-lg pulse" href="https://wa.me/905000000000?text=Merhaba%2C%20temizlik%20hizmeti%20i%C3%A7in%20teklif%20almak%20istiyorum." target="_blank" rel="noopener">💬 Ücretsiz Keşif İste</a>
+        <a class="btn btn-wa btn-lg pulse" href="https://wa.me/905515449658?text=Merhaba%2C%20temizlik%20hizmeti%20i%C3%A7in%20teklif%20almak%20istiyorum." target="_blank" rel="noopener">💬 Ücretsiz Keşif İste</a>
         <!-- ⚠️ TELEFON PLACEHOLDER -->
-        <a class="btn btn-ghost btn-lg" href="tel:05000000000">📞 0500 000 00 00</a>
+        <a class="btn btn-ghost btn-lg" href="tel:05515449658">📞 0551 544 96 58</a>
       </div>
       <div class="hero-points">
         <span><span class="ic">✓</span> Uzman &amp; güvenilir ekip</span>
@@ -397,11 +408,9 @@
       </div>
     </div>
     <div class="hero-visual">
-      <div class="hero-float hf-1"><span class="dot" style="background:#e0f7f1">✨</span><div>Tertemiz Sonuç<small>%100 memnuniyet</small></div></div>
       <div class="hero-img-wrap">
         <img src="https://meyrapaktemizlik.com/images/meyrapak-temizlik.webp" alt="Meyrapak Temizlik — Sivas profesyonel temizlik hizmeti" width="1254" height="1254" loading="eager" fetchpriority="high">
       </div>
-      <div class="hero-float hf-2"><span class="dot" style="background:#e0f2fe">🧴</span><div>Hijyenik Ürünler<small>Güvenli &amp; etkili</small></div></div>
     </div>
   </div>
 </section>
@@ -507,16 +516,11 @@
     <div class="sec-head reveal">
       <span class="kicker">Çalışmalarımız</span>
       <h2>Öncesi &amp; <span class="grad-text">Sonrası</span></h2>
-      <p>Tamamladığımız işlerden kareler — görselleri yükledikçe bu alan dolacak.</p>
+      <p>Bir işimizden örnek: dağınık ve kirli bir ofisten pırıl pırıl bir çalışma alanına.</p>
     </div>
-    <!-- ⬇ GÖRSEL YÜKLE: galeri / öncesi-sonrası kareleri -->
-    <div class="gal-grid">
-      <div class="ph tall"><div class="ph-in"><div class="i">🖼️</div><b>Görsel 1</b><small>öncesi / sonrası</small></div></div>
-      <div class="ph"><div class="ph-in"><div class="i">🖼️</div><b>Görsel 2</b></div></div>
-      <div class="ph"><div class="ph-in"><div class="i">🖼️</div><b>Görsel 3</b></div></div>
-      <div class="ph"><div class="ph-in"><div class="i">🖼️</div><b>Görsel 4</b></div></div>
-      <div class="ph"><div class="ph-in"><div class="i">🖼️</div><b>Görsel 5</b></div></div>
-    </div>
+    <figure class="ba-figure reveal">
+      <img src="https://meyrapaktemizlik.com/images/oncesi-sonrasi.webp" alt="Meyrapak Temizlik öncesi ve sonrası — kirli ofisten tertemiz ofise dönüşüm" width="1536" height="1024" loading="lazy">
+    </figure>
   </div>
 </section>
 
@@ -594,11 +598,11 @@
     <h2>Mekanınızı Tertemiz Teslim Alalım</h2>
     <p>Ücretsiz keşif ve şeffaf teklif için hemen ulaşın. Sivas'ın her noktasına profesyonel temizlik hizmeti.</p>
     <!-- ⚠️ TELEFON PLACEHOLDER -->
-    <span class="num"><a href="tel:05000000000">📞 0500 000 00 00</a></span>
+    <span class="num"><a href="tel:05515449658">📞 0551 544 96 58</a></span>
     <div class="row">
       <!-- ⚠️ WHATSAPP PLACEHOLDER -->
-      <a class="btn btn-wa btn-lg pulse" href="https://wa.me/905000000000?text=Merhaba%2C%20temizlik%20hizmeti%20i%C3%A7in%20teklif%20almak%20istiyorum." target="_blank" rel="noopener">💬 WhatsApp'tan Yazın</a>
-      <a class="btn btn-ghost btn-lg" href="tel:05000000000">📞 Hemen Ara</a>
+      <a class="btn btn-wa btn-lg pulse" href="https://wa.me/905515449658?text=Merhaba%2C%20temizlik%20hizmeti%20i%C3%A7in%20teklif%20almak%20istiyorum." target="_blank" rel="noopener">💬 WhatsApp'tan Yazın</a>
+      <a class="btn btn-ghost btn-lg" href="tel:05515449658">📞 Hemen Ara</a>
     </div>
   </div>
 </section>
@@ -614,11 +618,9 @@
     <div class="contact-grid">
       <div class="reveal">
         <!-- ⚠️ Tüm iletişim bilgileri PLACEHOLDER — gerçek bilgilerle güncelleyin -->
-        <div class="ci-row"><div class="ic">📞</div><div><b>Telefon</b><a href="tel:05000000000">0500 000 00 00</a></div></div>
-        <div class="ci-row"><div class="ic">💬</div><div><b>WhatsApp</b><a href="https://wa.me/905000000000" target="_blank" rel="noopener">0500 000 00 00</a></div></div>
-        <div class="ci-row"><div class="ic">✉️</div><div><b>E-posta</b><a href="mailto:info@meyrapaktemizlik.com">info@meyrapaktemizlik.com</a></div></div>
-        <div class="ci-row"><div class="ic">📍</div><div><b>Adres</b><span>Sivas / Türkiye <em style="opacity:.7">(açık adres eklenecek)</em></span></div></div>
-        <div class="ci-row"><div class="ic">🕐</div><div><b>Çalışma Saatleri</b><span>Pazartesi–Cumartesi · 08:00–19:00 <em style="opacity:.7">(güncelleyin)</em></span></div></div>
+        <div class="ci-row"><div class="ic">📞</div><div><b>Telefon</b><a href="tel:05515449658">0551 544 96 58</a></div></div>
+        <div class="ci-row"><div class="ic">💬</div><div><b>WhatsApp</b><a href="https://wa.me/905515449658" target="_blank" rel="noopener">0551 544 96 58</a></div></div>
+        <div class="ci-row"><div class="ic">✉️</div><div><b>E-posta</b><a href="mailto:meyrapaktemizlik@gmail.com">meyrapaktemizlik@gmail.com</a></div></div>
       </div>
       <div class="map-box reveal">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3066.9516926745223!2d36.987567600000006!3d39.763193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4fa6758b2de06807%3A0xd59e1dac9920af99!2sMeyrapak%20Temizlik!5e0!3m2!1str!2str!4v1783955852538!5m2!1str!2str" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Meyrapak Temizlik — Sivas harita"></iframe>
@@ -637,10 +639,7 @@
         <a href="#" class="logo" style="color:#fff"><img class="logo-mark" src="https://meyrapaktemizlik.com/images/meyrapak-logo.png" alt="Meyrapak Temizlik logosu" width="1024" height="1024"><span style="color:#fff">Meyrapak<small style="color:#7fb0cf">Temizlik · Sivas</small></span></a>
         <p>Sivas'ta ev, ofis, inşaat sonrası ve apartman temizliğinde profesyonel çözüm ortağınız. Tertemiz mekanlar için doğru adres.</p>
         <div class="foot-soc">
-          <!-- SOSYAL: kendi hesap linklerinizi ekleyin -->
-          <a href="#" aria-label="Instagram">📷</a>
-          <a href="#" aria-label="Facebook">📘</a>
-          <a href="https://wa.me/905000000000" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+          <a class="ig" href="https://instagram.com/meyrapak" target="_blank" rel="noopener" aria-label="Instagram — Meyrapak Temizlik"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
         </div>
       </div>
       <div>
@@ -652,10 +651,9 @@
       </div>
       <div>
         <h4>İletişim</h4>
-        <a href="tel:05000000000">📞 0500 000 00 00</a>
-        <a href="https://wa.me/905000000000" target="_blank" rel="noopener">💬 WhatsApp</a>
+        <a href="tel:05515449658">📞 0551 544 96 58</a>
+        <a href="https://wa.me/905515449658" target="_blank" rel="noopener">💬 WhatsApp</a>
         <a href="#iletisim">📍 Sivas &amp; çevresi</a>
-        <a href="#iletisim">🕐 Pzt–Cmt 08:00–19:00</a>
       </div>
     </div>
     <div class="foot-bottom">
@@ -669,8 +667,8 @@
 </footer>
 
 <!-- ===== Floating buttons ===== -->
-<a class="call-float pulse-blue" href="tel:05000000000" aria-label="Telefonla Ara">📞</a>
-<a class="wa-float pulse" href="https://wa.me/905000000000?text=Merhaba%2C%20temizlik%20hizmeti%20i%C3%A7in%20teklif%20almak%20istiyorum." target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+<a class="call-float pulse-blue" href="tel:05515449658" aria-label="Telefonla Ara">📞</a>
+<a class="wa-float pulse" href="https://wa.me/905515449658?text=Merhaba%2C%20temizlik%20hizmeti%20i%C3%A7in%20teklif%20almak%20istiyorum." target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
 
 <script>
   // year
