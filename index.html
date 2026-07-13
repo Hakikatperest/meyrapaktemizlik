@@ -22,7 +22,6 @@
 <meta property="og:description" content="Ev, ofis, inşaat sonrası ve apartman temizliğinde Sivas'ın güvenilir ekibi. Ücretsiz keşif ve teklif.">
 <meta property="og:url" content="https://www.meyrapaktemizlik.com/">
 <meta property="og:site_name" content="Meyrapak Temizlik">
-<!-- GÖRSEL: paylaşım görseli (1200x630) yüklendiğinde og:image ekleyin -->
 
 <!-- FAVICON: Meyrapak logosu -->
 <link rel="icon" type="image/png" href="https://meyrapaktemizlik.com/images/meyrapak-logo.png">
@@ -137,13 +136,6 @@
   .bubbles span{position:absolute;bottom:-40px;font-size:1.6rem;opacity:0;will-change:transform;animation:rise 13s linear infinite}
   @keyframes rise{0%{transform:translateY(0) rotate(0);opacity:0}12%{opacity:.22}86%{opacity:.16}100%{transform:translateY(-118vh) rotate(200deg);opacity:0}}
 
-  /* Placeholder blocks (görsel yer tutucu) */
-  .ph{background:linear-gradient(135deg,var(--sky-100),#cbeafb);display:grid;place-items:center;color:var(--blue-600);position:relative}
-  .ph .ph-in{text-align:center;opacity:.9;padding:16px}
-  .ph .ph-in .i{font-size:2.6rem;line-height:1}
-  .ph .ph-in b{display:block;margin-top:8px;font-size:.9rem;color:var(--blue-700)}
-  .ph .ph-in small{color:var(--blue-600);opacity:.75;font-size:.76rem}
-
   /* Stats */
   .stats{background:linear-gradient(100deg,var(--blue-700),var(--cyan-500));color:#fff;padding:44px 0}
   .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
@@ -192,7 +184,9 @@
   /* Testimonials */
   .rev{background:var(--sky-50)}
   .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-  .rev-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:var(--shadow-sm)}
+  .rev-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:var(--shadow-sm);display:block;transition:transform .2s,box-shadow .2s}
+  .rev-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--sky-100)}
+  .rev-card .who small{display:inline-flex;align-items:center;gap:3px}
   .rev-card .stars{color:#f5a623;font-size:.95rem;letter-spacing:2px}
   .rev-card p{color:#334f61;font-size:.96rem;margin:12px 0 16px}
   .rev-card .who{display:flex;align-items:center;gap:11px}
@@ -204,7 +198,7 @@
 
   /* Service area + map */
   .area-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:center}
-  .area-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px 20px;margin-top:18px}
+  .area-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px 26px;margin:6px auto 0;max-width:540px}
   .area-list li{position:relative;padding-left:26px;color:var(--blue-800);font-weight:600}
   .area-list li::before{content:"📍";position:absolute;left:0;top:0}
   .map-box{border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);line-height:0}
@@ -316,7 +310,6 @@
 </style>
 
 <!-- ===== Schema.org: LocalBusiness ===== -->
-<!-- ⚠️ telephone / address / openingHours PLACEHOLDER — gerçek bilgilerle güncelleyin -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -359,7 +352,6 @@
     <div class="tb-left">📍 Sivas &amp; çevresi · profesyonel temizlik hizmeti</div>
     <div class="tb-right">
       <span class="spark">✦</span> <span>Ücretsiz keşif &amp; teklif</span>
-      <!-- ⚠️ TELEFON PLACEHOLDER -->
       <a href="tel:05515449658">📞 0551 544 96 58</a>
     </div>
   </div>
@@ -404,9 +396,7 @@
       <h1>Sivas'ta Her Alan <span class="grad-text">Pırıl Pırıl</span> Temizlensin</h1>
       <p class="lead">Ev, ofis, inşaat sonrası ve apartman temizliğinde <strong>uzman ekip</strong> ve <strong>profesyonel ekipmanla</strong> yanınızdayız. Ücretsiz keşif, şeffaf teklif ve tertemiz bir sonuç.</p>
       <div class="hero-cta">
-        <!-- ⚠️ WHATSAPP PLACEHOLDER -->
         <a class="btn btn-wa btn-lg pulse" href="https://wa.me/905515449658?text=Merhaba%2C%20temizlik%20hizmeti%20i%C3%A7in%20teklif%20almak%20istiyorum." target="_blank" rel="noopener">💬 Ücretsiz Keşif İste</a>
-        <!-- ⚠️ TELEFON PLACEHOLDER -->
         <a class="btn btn-ghost btn-lg" href="tel:05515449658">📞 0551 544 96 58</a>
       </div>
       <div class="hero-points">
@@ -423,7 +413,7 @@
   </div>
 </section>
 
-<!-- ===== Stats (⚠️ rakamlar örnek — kendi verinizle güncelleyin) ===== -->
+<!-- ===== Stats ===== -->
 <section class="stats" style="padding:44px 0">
   <div class="wrap">
     <div><div class="num" data-count="1500" data-suffix="+">0</div><div class="lbl">Tamamlanan temizlik</div></div>
@@ -466,7 +456,6 @@
         <p>Merdiven, giriş, asansör ve ortak alanların düzenli temizliği. Apartman ve site yönetimleri için periyodik bakım çözümleri.</p>
         <a class="more" href="#iletisim">Teklif al →</a>
       </div>
-      <!-- Ek yaygın hizmetler — sunmuyorsanız kaldırabilirsiniz -->
       <div class="serv-card reveal">
         <div class="serv-icon">🪟</div>
         <h3>Cam Temizliği</h3>
@@ -518,7 +507,7 @@
   </div>
 </section>
 
-<!-- ===== Gallery (görsel yer tutucuları) ===== -->
+<!-- ===== Gallery ===== -->
 <section id="galeri" class="why">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -537,7 +526,7 @@
   </div>
 </section>
 
-<!-- ===== Testimonials (⚠️ ÖRNEK yorumlar — gerçek müşteri yorumlarınızla değiştirin) ===== -->
+<!-- ===== Yorumlar ===== -->
 <section id="yorumlar" class="rev">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -545,45 +534,41 @@
       <h2>Bizi Tercih Edenler <span class="grad-text">Ne Diyor?</span></h2>
     </div>
     <div class="rev-grid">
-      <div class="rev-card reveal">
+      <a class="rev-card reveal" href="https://share.google/QkHd0bZZDMbvYzxoc" target="_blank" rel="noopener">
         <div class="stars">★★★★★</div>
-        <p>"İnşaat sonrası dairemizi gerçekten kullanıma hazır teslim ettiler. Toz, boya, hiçbir iz kalmadı. Ekip çok titiz ve güler yüzlüydü."</p>
-        <div class="who"><span class="av">A</span><div><b>A. Yılmaz</b><small>Sivas · İnşaat sonrası temizlik</small></div></div>
-      </div>
-      <div class="rev-card reveal">
+        <p>"Çok güzel bi temizlikti çok memnun kaldık teşekkür ederiz ✨😊"</p>
+        <div class="who"><span class="av">Z</span><div><b>Zülal Karakuş</b><small>Google Yorumu ↗</small></div></div>
+      </a>
+      <a class="rev-card reveal" href="https://share.google/hzjoQJoTs2jegRKir" target="_blank" rel="noopener">
         <div class="stars">★★★★★</div>
-        <p>"Ofisimizin düzenli temizliğini onlara emanet ettik. Zamanında geliyorlar, iş ciddiyetleri tam. Çalışanlarımız çok memnun."</p>
-        <div class="who"><span class="av">M</span><div><b>M. Demir</b><small>Sivas · Ofis temizliği</small></div></div>
-      </div>
-      <div class="rev-card reveal">
+        <p>"Vermiş oldugunuz hizmetten dolayı tşk ederim emeklerinize saglık"</p>
+        <div class="who"><span class="av">Ş</span><div><b>Şükran Yücesoy</b><small>Google Yorumu ↗</small></div></div>
+      </a>
+      <a class="rev-card reveal" href="https://share.google/0VxhA57M9bMepKxLB" target="_blank" rel="noopener">
         <div class="stars">★★★★★</div>
-        <p>"Ev temizliği için çağırdık, sonuç beklediğimden çok daha iyiydi. Fiyat baştan netti, sürpriz olmadı. Kesinlikle tavsiye ederim."</p>
-        <div class="who"><span class="av">Z</span><div><b>Z. Kaya</b><small>Sivas · Ev temizliği</small></div></div>
-      </div>
+        <p>"Aldığım hizmetten memnun kadim teşekkür ederim meyrapak"</p>
+        <div class="who"><span class="av">M</span><div><b>Mediha Yıldırım</b><small>Google Yorumu ↗</small></div></div>
+      </a>
     </div>
-    <p class="rev-note">Not: Yukarıdaki yorumlar örnek/şablondur — gerçek müşteri yorumlarınızla değiştirin.</p>
   </div>
 </section>
 
 <!-- ===== Service area + map ===== -->
 <section id="bolge">
   <div class="wrap">
-    <div class="area-grid">
-      <div class="reveal">
-        <span class="kicker">Hizmet Bölgemiz</span>
-        <h2 style="font-size:clamp(1.7rem,3.4vw,2.4rem);font-weight:800;color:var(--blue-900);margin-top:12px">Sivas'ın Her Noktasına Ulaşıyoruz</h2>
-        <p style="color:var(--muted);margin-top:14px">Sivas merkez ve çevresinde ev, ofis, inşaat sonrası ve apartman temizliği hizmeti veriyoruz. Bölgeniz için ücretsiz keşif talep edin.</p>
-        <ul class="area-list">
-          <li>Sivas Merkez</li>
-          <li>Konaklar &amp; siteler</li>
-          <li>İş yerleri &amp; ofisler</li>
-          <li>Yeni inşaatlar</li>
-        </ul>
-        <a class="btn btn-primary btn-lg" href="#iletisim" style="margin-top:22px">Bölgeniz İçin Teklif Alın</a>
-      </div>
-      <div class="map-box reveal">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3066.9516926745223!2d36.987567600000006!3d39.763193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4fa6758b2de06807%3A0xd59e1dac9920af99!2sMeyrapak%20Temizlik!5e0!3m2!1str!2str!4v1783955852538!5m2!1str!2str" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Meyrapak Temizlik — Sivas konum"></iframe>
-      </div>
+    <div class="sec-head reveal">
+      <span class="kicker">Hizmet Bölgemiz</span>
+      <h2>Sivas'ın Her Noktasına <span class="grad-text">Ulaşıyoruz</span></h2>
+      <p>Sivas merkez ve çevresinde ev, ofis, inşaat sonrası ve apartman temizliği hizmeti veriyoruz. Bölgeniz için ücretsiz keşif talep edin.</p>
+    </div>
+    <ul class="area-list reveal">
+      <li>Sivas Merkez</li>
+      <li>Konaklar &amp; siteler</li>
+      <li>İş yerleri &amp; ofisler</li>
+      <li>Yeni inşaatlar</li>
+    </ul>
+    <div class="reveal" style="text-align:center;margin-top:30px">
+      <a class="btn btn-primary btn-lg" href="#iletisim">Bölgeniz İçin Teklif Alın</a>
     </div>
   </div>
 </section>
@@ -608,12 +593,10 @@
 <!-- ===== Final CTA ===== -->
 <section class="cta-final">
   <div class="wrap">
-    <h2>Mekanınızı Tertemiz Teslim Alalım</h2>
+    <h2>Mekanınızı Tertemiz Teslim Edelim</h2>
     <p>Ücretsiz keşif ve şeffaf teklif için hemen ulaşın. Sivas'ın her noktasına profesyonel temizlik hizmeti.</p>
-    <!-- ⚠️ TELEFON PLACEHOLDER -->
     <span class="num"><a href="tel:05515449658">📞 0551 544 96 58</a></span>
     <div class="row">
-      <!-- ⚠️ WHATSAPP PLACEHOLDER -->
       <a class="btn btn-wa btn-lg pulse" href="https://wa.me/905515449658?text=Merhaba%2C%20temizlik%20hizmeti%20i%C3%A7in%20teklif%20almak%20istiyorum." target="_blank" rel="noopener">💬 WhatsApp'tan Yazın</a>
     </div>
   </div>
@@ -629,7 +612,6 @@
     </div>
     <div class="contact-grid">
       <div class="reveal">
-        <!-- ⚠️ Tüm iletişim bilgileri PLACEHOLDER — gerçek bilgilerle güncelleyin -->
         <div class="ci-row"><div class="ic">📞</div><div><b>Telefon</b><a href="tel:05515449658">0551 544 96 58</a></div></div>
         <div class="ci-row"><div class="ic">💬</div><div><b>WhatsApp</b><a href="https://wa.me/905515449658" target="_blank" rel="noopener">0551 544 96 58</a></div></div>
         <div class="ci-row"><div class="ic">✉️</div><div><b>E-posta</b><a href="mailto:meyrapaktemizlik@gmail.com">meyrapaktemizlik@gmail.com</a></div></div>
